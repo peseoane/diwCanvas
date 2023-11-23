@@ -1,4 +1,3 @@
-// Ball.js
 class Ball {
     constructor(x, y, radius, color, speed, directionX, directionY) {
       this.x = x;
@@ -15,8 +14,7 @@ class Ball {
       this.y += this.speed * this.directionY;
     }
   }
-  
-  // Paddle.js
+
   class Paddle {
     constructor(x, y, width, height, color, dy) {
       this.x = x;
@@ -119,10 +117,12 @@ class Ball {
       if (this.ball.x - this.ball.radius < 0) {
         this.aiScore++;
         this.gameRunning = false;
+        this.playerWon = false;
         playDie();
       } else if (this.ball.x + this.ball.radius > this.canvas.width) {
         this.playerScore++;
         this.gameRunning = false;
+        this.playerWon = true;
         playBeep();
       }
     }
@@ -151,7 +151,7 @@ class Ball {
       this.canvasHandler.drawPaddle(this.aiPaddle);
       this.canvasHandler.drawScore(this.playerScore, this.aiScore);
       if (!this.gameRunning) {
-        const message = this.playerScore > this.aiScore ? 'You win! press ENTER' : 'You lose! 💀 press ENTER';
+        const message = this.playerWon ? 'You win! press ENTER' : 'You lose! 💀 press ENTER';
         this.canvasHandler.drawMessage(message);
       }
     }
@@ -212,16 +212,16 @@ class Ball {
   });
   
   function playBeep() {
-    const beep = new Audio('../js/pong/win.opus');
-    beep.play();
+    const beep = new Audio('../assets/audio/win.opus');
+    beep.play().then(r => console.log(r));
   }
-  
+
   function playDie() {
-    const beep = new Audio('../js/pong/bruh.opus');
-    beep.play();
+    const beep = new Audio('../assets/audio/bruh.opus');
+    beep.play().then(r => console.log(r));
   }
   
   function playHit() {
-    const beep = new Audio('../js/pong/squash.m4a');
-    beep.play();
+    const beep = new Audio('../assets/audio/squash.m4a');
+    beep.play().then(r => console.log(r));
   }
