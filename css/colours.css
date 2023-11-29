@@ -1,0 +1,16 @@
+:root[data-theme="light"] {
+    --text: #040316;
+    --background: #ffffff;
+    --primary: #0079ad;
+    --secondary: #71b4d0;
+    --accent: #004461;
+    --backgroundSvg: url("../img/backgroundLight.svg")
+}
+:root[data-theme="dark"] {
+    --text: #eae9fc;
+    --background: #000000;
+    --primary: #52cbff;
+    --secondary: #2f718e;
+    --accent: #9ee2ff;
+    --backgroundSvg: url("../img/backgroundDark.svg")
+}

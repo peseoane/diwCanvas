@@ -1,9 +1,13 @@
 fetch('../templates/navbar.html')
     .then(response => response.text())
     .then(content => {
-        // Selecciona el div con id "navegacion"
         const navegacion = document.getElementById('navegacion');
+        navegacion.innerHTML = content;
+    });
 
-        // Cambia el innerHTML del div seleccionado
+fetch('../templates/footer.html')
+    .then(response => response.text())
+    .then(content => {
+        const navegacion = document.getElementById('piePagina');
         navegacion.innerHTML = content;
     });

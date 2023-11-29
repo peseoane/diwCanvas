@@ -1,6 +1,6 @@
+@import "main.css";
+
 #canvasMolinillo {
-    border: 1px solid black;
-    background-color: #000000;
     margin: 0 auto;
     display: block;
     height: 90vh;

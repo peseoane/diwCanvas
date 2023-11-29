@@ -25,8 +25,14 @@ class WindPinwheel {
     draw() {
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
+        // Get the current theme
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+
+        // Set the pole color based on the current theme
+        const poleColor = currentTheme === 'dark' ? 'white' : 'black';
+
         // Draw the main pole
-        this.ctx.fillStyle = "white";
+        this.ctx.fillStyle = poleColor;
         this.ctx.fillRect(
             this.canvas.width / 2 - this.poleWidth / 2,
             this.canvas.height / 2 - this.poleHeight,
