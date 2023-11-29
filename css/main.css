@@ -4,6 +4,7 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background: url("../img/background.svg") center;
 }
 
 #navegacion, .topnav {
@@ -33,6 +34,12 @@ body {
 
 #navegacion .icon {
     display: none;
+}
+
+@media screen and (max-width: 600px) {
+    #navegacion {
+        flex-direction: column;
+    }
 }
 
 #principal{
