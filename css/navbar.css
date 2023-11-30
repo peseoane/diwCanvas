@@ -16,8 +16,15 @@
     position: relative;
 }
 
-#darkIcon, #lightIcon {
+#lightIcon {
+    background: url(../img/sun.svg) no-repeat center;
+}
+
+#darkIcon {
     background: url(../img/dark.svg) no-repeat center;
+}
+
+#lightIcon, #darkIcon {
     transition: filter 0.5s ease;
 }
 
