@@ -4,7 +4,9 @@
     --primary: #0079ad;
     --secondary: #71b4d0;
     --accent: #004461;
-    --backgroundSvg: url("../img/backgroundLight.svg")
+    --backgroundSvg: url("../img/backgroundLight.svg");
+    --backgroundSvgAlt: url("../img/backgroundAltLight.svg");
+    --github: url("../img/github-mark.svg");
 }
 :root[data-theme="dark"] {
     --text: #eae9fc;
@@ -13,6 +15,8 @@
     --secondary: #2f718e;
     --accent: #9ee2ff;
     --backgroundSvg: url("../img/backgroundDark.svg");
+    --backgroundSvgAlt: url("../img/backgroundAltDark.svg");
+    --github: url("../img/github-mark-white.svg");
 }
 
 a {
