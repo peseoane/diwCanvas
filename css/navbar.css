@@ -1,0 +1,34 @@
+#navegacion, .topnav {
+    background-color: var(--background) no-repeat center center fixed;
+    overflow: hidden;
+}
+
+#navegacion a, .topnav a {
+    float: left;
+    display: block;
+    color: var(--text);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+#navegacion a:hover {
+    background-color: black;
+    color: white;
+}
+
+#navegacion a.active {
+    background-color: var(--primary);
+    color: var(--text);
+}
+
+#navegacion .icon {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    #navegacion {
+        flex-direction: column;
+    }
+}

@@ -2,87 +2,13 @@
 @import "fonts.css";
 @import "switch.css";
 @import "footer.css";
+@import "navbar.css";
 
-:root[data-theme="light"] {
-    --text: #040316;
-    --background: #ffffff;
-    --primary: #0079ad;
-    --secondary: #71b4d0;
-    --accent: #004461;
-}
-:root[data-theme="dark"] {
-    --text: #eae9fc;
-    --background: #000000;
-    --primary: #52cbff;
-    --secondary: #2f718e;
-    --accent: #9ee2ff;
-}
 * {
     margin: 0;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
     background: var(--backgroundSvg) no-repeat center center fixed;
     background-size: cover;
-}
-
-#navegacion, .topnav {
-    background-color: var(--background) no-repeat center center fixed;
-    overflow: hidden;
-}
-
-#navegacion a, .topnav a {
-    float: left;
-    display: block;
-    color: var(--text);
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
-
-#navegacion a:hover {
-    background-color: black;
-    color: white;
-}
-
-#navegacion a.active {
-    background-color: var(--primary);
-    color: var(--text);
-}
-
-#navegacion .icon {
-    display: none;
-}
-
-@media screen and (max-width: 600px) {
-    #navegacion {
-        flex-direction: column;
-    }
-}
-
-#principal{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: var(--background);
-    padding: 1rem;
-    color: var(--text);
-    height:100vh;
-}
-
-.juegos{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1rem;
-    padding: 1rem;
-    justify-items: center;
-    align-items: center;
-    height:100vh;
-}
-
-.juegoLink {
-    text-decoration: none;
-    color: var(--text);
 }

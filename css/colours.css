@@ -12,5 +12,33 @@
     --primary: #52cbff;
     --secondary: #2f718e;
     --accent: #9ee2ff;
-    --backgroundSvg: url("../img/backgroundDark.svg")
+    --backgroundSvg: url("../img/backgroundDark.svg");
+}
+
+a {
+    color: var(--text);
+}
+
+a:hover {
+    color: var(--accent);
+}
+
+a:active {
+    color: var(--accent);
+}
+
+a:visited {
+    color: var(--text);
+}
+
+body {
+    background-color: var(--background);
+    background-image: var(--backgroundSvg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: var(--text);
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
 }

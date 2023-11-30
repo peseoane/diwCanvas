@@ -1,0 +1,32 @@
+@import "main.css";
+
+#principal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: var(--background); */
+    padding: 1rem;
+    color: var(--text);
+    height:100vh;
+}
+
+.juegos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    padding: 1rem;
+    justify-items: center;
+    align-items: center;
+    height:100vh;
+}
+
+@media screen and (max-width: 800px) {
+    .juegos {
+        grid-template-columns: 1fr;
+    }
+}
+
+.juegoLink {
+    text-decoration: none;
+    color: var(--text);
+}
