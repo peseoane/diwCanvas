@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+window.addEventListener('load', function() {
     const storedTheme = localStorage.getItem('theme') || 'light';
     document.documentElement.setAttribute('data-theme', storedTheme);
 
