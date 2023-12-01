@@ -1,14 +1,14 @@
 @import "main.css";
 
 #canvasMolinillo {
-    margin: 0 auto;
-    display: block;
-    height: 90vh;
+  margin: 0 auto;
+  display: block;
+  height: 90vh;
 }
 
 @media screen and (max-width: 800px) {
-    #canvasMolinillo {
-        height: auto;
-        width: 100%;
-    }
+  #canvasMolinillo {
+    height: auto;
+    width: 100%;
+  }
 }

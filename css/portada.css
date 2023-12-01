@@ -1,111 +1,110 @@
 @import "main.css";
 
 #principal {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 1rem;
-    color: var(--text);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  color: var(--text);
 }
 
 .juegos {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1rem;
-    padding: 1rem;
-    justify-items: center;
-    align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  padding: 1rem;
+  justify-items: center;
+  align-items: center;
 }
 
 .containerMiniaturaJuego {
-    text-decoration: none;
-    color: var(--text);
-    width: 15vw;
-    height: 15vw;
-    padding: 2rem;
-    border: 1px solid var(--primary);
-    border-radius: 1rem;
-    transition: transform 0.3s ease-in-out;
+  text-decoration: none;
+  color: var(--text);
+  width: 15vw;
+  height: 15vw;
+  padding: 2rem;
+  border: 1px solid var(--primary);
+  border-radius: 1rem;
+  transition: transform 0.3s ease-in-out;
 }
 
 @keyframes parpadeo {
-    0% {
-        opacity: 1;
-    }
-    25% {
-        opacity: 0.5;
-        color: var(--primary);
-    }
-    50% {
-        opacity: 1;
-        color: var(--accent);
-    }
-    75% {
-        opacity: 0.5;
-        color: var(--secondary);
-    }
-    100% {
-        opacity: 1;
-    }
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.5;
+    color: var(--primary);
+  }
+  50% {
+    opacity: 1;
+    color: var(--accent);
+  }
+  75% {
+    opacity: 0.5;
+    color: var(--secondary);
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .miniaturaJuego {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    text-transform: uppercase;
-    font-weight: 800;
-    font-size: 2rem;
-    color: var(--text);
-    text-shadow: var(--background) 0 0 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 2rem;
+  color: var(--text);
+  text-shadow: var(--background) 0 0 1rem;
 }
 
 .miniaturaJuego p {
-    animation: parpadeo 1s infinite;
+  animation: parpadeo 1s infinite;
 }
 
 .miniaturaJuego:hover p {
-    animation: none;
+  animation: none;
 }
 
 #miniaturaMolinillo {
-    background: url('../img/molinillo.svg') no-repeat center center / cover;
+  background: url("../img/molinillo.svg") no-repeat center center / cover;
 }
 
 #miniaturaPong {
-    background: url('../img/pong.svg') no-repeat center center / cover;
+  background: url("../img/pong.svg") no-repeat center center / cover;
 }
 
 #miniaturaTanque {
-    background: url('../img/tanque.svg') no-repeat center center / cover;
+  background: url("../img/tanque.svg") no-repeat center center / cover;
 }
 
 #miniaturaBillar {
-    background: url('../img/billar.svg') no-repeat center center / cover;
+  background: url("../img/billar.svg") no-repeat center center / cover;
 }
 
 #miniaturaBichos {
-    background: url('../img/pikachu.svg') no-repeat center center / cover;
+  background: url("../img/pikachu.svg") no-repeat center center / cover;
 }
 
 #miniaturaFaro {
-    background: url('../img/faro.svg') no-repeat center center / cover;
-
+  background: url("../img/faro.svg") no-repeat center center / cover;
 }
 
 #miniaturaColores {
-    background: url('../img/cartaAjuste.svg') no-repeat center center / cover
+  background: url("../img/cartaAjuste.svg") no-repeat center center / cover;
 }
 
 #miniaturaBolas {
-    background: url('../img/esferaTangente.svg') no-repeat center center / cover;
+  background: url("../img/esferaTangente.svg") no-repeat center center / cover;
 }
 
 .juegos {
-    filter: drop-shadow(0 0 0.75rem var(--primary));
+  filter: drop-shadow(0 0 0.75rem var(--primary));
 }
 
 #miniaturaTanque,
@@ -114,44 +113,42 @@
 #miniaturaBolas,
 #miniaturaFaro,
 #miniaturaBillar {
-    background-size: contain;
+  background-size: contain;
 }
 
 #miniaturaColores,
 #miniaturaBichos {
-    background-size: cover;
+  background-size: cover;
 }
 
 #miniaturaColores {
-    border-radius: 1rem;
+  border-radius: 1rem;
 }
-
 
 .containerMiniaturaJuego:hover {
-    transform: scale(1.5);
-    backdrop-filter: blur(10px);
-    background-image: var(--crt);
-    background-size: cover;
-    animation: parpadeo 1s infinite;
+  transform: scale(1.5);
+  backdrop-filter: blur(10px);
+  background-image: var(--crt);
+  background-size: cover;
+  animation: parpadeo 1s infinite;
 }
 
-
 @media screen and (max-width: 800px) {
-    .juegos {
-        grid-template-columns: 1fr;
-        grid-gap: 3rem;
-    }
+  .juegos {
+    grid-template-columns: 1fr;
+    grid-gap: 3rem;
+  }
 
-    .containerMiniaturaJuego {
-        width: 50vw;
-        height: 50vw;
-    }
+  .containerMiniaturaJuego {
+    width: 50vw;
+    height: 50vw;
+  }
 
-    .containerMiniaturaJuego:hover {
-        transform: scale(1.25);
-    }
+  .containerMiniaturaJuego:hover {
+    transform: scale(1.25);
+  }
 
-    h1 {
-        text-align: center;
-    }
+  h1 {
+    text-align: center;
+  }
 }
