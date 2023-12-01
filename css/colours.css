@@ -7,6 +7,7 @@
     --backgroundSvg: url("../img/backgroundLight.svg");
     --backgroundSvgAlt: url("../img/backgroundAltLight.svg");
     --github: url("../img/github-mark.svg");
+    --crt: url("../img/synthwave.gif");
 }
 :root[data-theme="dark"] {
     --text: #eae9fc;
@@ -17,6 +18,7 @@
     --backgroundSvg: url("../img/backgroundDark.svg");
     --backgroundSvgAlt: url("../img/backgroundAltDark.svg");
     --github: url("../img/github-mark-white.svg");
+    --crt: url("../img/crt.gif");
 }
 
 a {

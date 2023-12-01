@@ -130,7 +130,7 @@
 .containerMiniaturaJuego:hover {
     transform: scale(1.5);
     backdrop-filter: blur(10px);
-    background-image: url('../img/crtAlpha.gif');
+    background-image: var(--crt);
     background-size: cover;
     animation: parpadeo 1s infinite;
 }
