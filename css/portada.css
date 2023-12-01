@@ -91,16 +91,21 @@
     background: url('../img/pikachu.svg') no-repeat center center / cover;
 }
 
-#miniaturaFaro{
+#miniaturaFaro {
     background: url('../img/faro.svg') no-repeat center center / cover;
+
 }
 
-#miniaturaColores{
-    background: url('../img/colores.svg') no-repeat center center / cover;
+#miniaturaColores {
+    background: url('../img/cartaAjuste.svg') no-repeat center center / cover
 }
 
-#miniaturaBolas{
-    background: url('../img/bolas.svg') no-repeat center center / cover;
+#miniaturaBolas {
+    background: url('../img/esferaTangente.svg') no-repeat center center / cover;
+}
+
+.juegos {
+    filter: drop-shadow(0 0 0.75rem var(--primary));
 }
 
 #miniaturaTanque,
@@ -108,14 +113,19 @@
 #miniaturaMolinillo,
 #miniaturaBolas,
 #miniaturaFaro,
-#miniaturaColores,
 #miniaturaBillar {
     background-size: contain;
 }
 
+#miniaturaColores,
 #miniaturaBichos {
     background-size: cover;
 }
+
+#miniaturaColores {
+    border-radius: 1rem;
+}
+
 
 .containerMiniaturaJuego:hover {
     transform: scale(1.5);
