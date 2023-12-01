@@ -6,11 +6,9 @@
 
 * {
     margin: 0;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 body {
-    background: var(--backgroundSvg) no-repeat center center fixed;
     background-size: cover;
-
 }
