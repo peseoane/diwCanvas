@@ -1,3 +1,4 @@
+// Ball.js
 class Ball {
   constructor(x, y, radius, color, speed, directionX, directionY) {
     this.x = x;
@@ -15,6 +16,7 @@ class Ball {
   }
 }
 
+// Paddle.js
 class Paddle {
   constructor(x, y, width, height, color, dy) {
     this.x = x;
@@ -39,6 +41,7 @@ class Paddle {
 // CanvasHandler.js
 class CanvasHandler {
   constructor(canvas) {
+    this.canvas = canvas;
     this.ctx = canvas.getContext("2d");
     this.width = canvas.width;
     this.height = canvas.height;
@@ -59,7 +62,6 @@ class CanvasHandler {
     this.ctx.fillStyle = paddle.color;
     this.ctx.fillRect(paddle.x, paddle.y, paddle.width, paddle.height);
   }
-
   drawScore(playerScore, aiScore) {
     this.ctx.fillStyle = "white";
     this.ctx.font = "24px Arial";
@@ -144,12 +146,10 @@ class Pong {
     if (this.ball.x - this.ball.radius < 0) {
       this.aiScore++;
       this.gameRunning = false;
-      this.playerWon = false;
       playDie();
     } else if (this.ball.x + this.ball.radius > this.canvas.width) {
       this.playerScore++;
       this.gameRunning = false;
-      this.playerWon = true;
       playBeep();
     }
   }
@@ -178,9 +178,10 @@ class Pong {
     this.canvasHandler.drawPaddle(this.aiPaddle);
     this.canvasHandler.drawScore(this.playerScore, this.aiScore);
     if (!this.gameRunning) {
-      const message = this.playerWon
-        ? "You win! press ENTER"
-        : "You lose! 💀 press ENTER";
+      const message =
+        this.playerScore > this.aiScore
+          ? "You win! press ENTER"
+          : "You lose! 💀 press ENTER";
       this.canvasHandler.drawMessage(message);
     }
   }
@@ -248,16 +249,16 @@ document.addEventListener("keyup", (event) => {
 });
 
 function playBeep() {
-  const beep = new Audio("../assets/audio/win.opus");
-  beep.play().catch((error) => console.log(error));
+  const beep = new Audio("../assets/win.opus");
+  beep.play();
 }
 
 function playDie() {
-  const beep = new Audio("../assets/audio/bruh.opus");
-  beep.play().catch((error) => console.log(error));
+  const beep = new Audio("../assets/bruh.opus");
+  beep.play();
 }
 
 function playHit() {
-  const beep = new Audio("../assets/audio/squash.m4a");
-  beep.play().catch((error) => console.log(error));
+  const beep = new Audio("../assets/squash.m4a");
+  beep.play();
 }

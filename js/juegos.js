@@ -24,15 +24,9 @@ document.querySelectorAll(".miniaturaJuego").forEach(function (gameElement) {
     canvas.width = 800;
     canvas.height = 600;
     gameContainer.appendChild(canvas);
+    console.log("Creado el canvas : " + canvas.id);
 
     document.body.appendChild(gameContainer);
-
-    const script = document.createElement("script");
-    script.id = `${gameName}Script`;
-    script.src = `../js/${gameName}.js`;
-    script.defer = true;
-
-    document.body.appendChild(script);
 
     const cssLink = document.createElement("link");
     cssLink.id = `${gameName}Css`;
@@ -40,5 +34,28 @@ document.querySelectorAll(".miniaturaJuego").forEach(function (gameElement) {
     cssLink.href = "../css/canvas.css";
 
     document.head.appendChild(cssLink);
+    let gameIsActive = true;
+
+    const script = document.createElement("script");
+    script.id = `${gameName}Script`;
+    script.src = `../js/${gameName}.js`;
+    script.defer = true;
+    console.log("Inyectado el script : " + script.id);
+
+    document.body.appendChild(script);
+
+    if (gameName === "pong") {
+      document.addEventListener("keydown", function (event) {
+        if (gameIsActive) {
+          event.preventDefault();
+          // En algunos viewports muy concretos esto evita que nos deslice como
+          // en el pong la pantalla al mover arriba y abajo.
+        }
+      });
+    } else if (gameName === "bichos") {
+      // es una pena porque el juego está hecho con svgs y si no en 800x600 se ve muy borroso al escalar...
+      canvas.width = 1024;
+      canvas.height = 768;
+    }
   });
 });
