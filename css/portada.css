@@ -134,8 +134,8 @@
   background-size: cover;
 }
 
-#canvasBillar{
-  background: url("../img/billarTapiz.jpg") no-repeat center center / cover;");
+#canvasBillar {
+  background: url("../img/billarTapiz.jpg") no-repeat center center / cover;
 }
 
 .containerMiniaturaJuego:hover {
