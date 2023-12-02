@@ -76,7 +76,7 @@ document.querySelectorAll(".miniaturaJuego").forEach(function (gameElement) {
 
       const speedValue = document.createElement("label");
       speedValue.id = "speedValue";
-      speedValue.textContent = "50";
+      speedValue.textContent = "7";
       controlsContainer.appendChild(speedValue);
 
       gameContainer.appendChild(controlsContainer);
@@ -87,8 +87,8 @@ document.querySelectorAll(".miniaturaJuego").forEach(function (gameElement) {
       const numeroCuadradosSlider = document.createElement("input");
       numeroCuadradosSlider.id = "numeroCuadradosSlider";
       numeroCuadradosSlider.type = "range";
-      numeroCuadradosSlider.min = "7";
-      numeroCuadradosSlider.max = "70";
+      numeroCuadradosSlider.min = "1";
+      numeroCuadradosSlider.max = "128";
       numeroCuadradosSlider.value = "7";
       numeroCuadradosSlider.className = "slider";
       controlsContainer.appendChild(numeroCuadradosSlider);
@@ -100,7 +100,7 @@ document.querySelectorAll(".miniaturaJuego").forEach(function (gameElement) {
 
       const numCuadradosValue = document.createElement("label");
       numCuadradosValue.id = "speedValue";
-      numCuadradosValue.textContent = "50";
+      numCuadradosValue.textContent = "7";
       controlsContainer.appendChild(numCuadradosValue);
       gameContainer.appendChild(controlsContainer);
     }
