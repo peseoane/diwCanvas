@@ -125,12 +125,20 @@
   border-radius: 1rem;
 }
 
+.miniaturaJuego {
+  transition: transform 1s ease-in-out;
+}
+
+.miniaturaJuego:hover {
+  background-image: var(--crt);
+  background-size: cover;
+}
+
 .containerMiniaturaJuego:hover {
   transform: scale(1.5);
   backdrop-filter: blur(10px);
   background-image: var(--crt);
   background-size: cover;
-  animation: parpadeo 1s infinite;
 }
 
 @media screen and (max-width: 800px) {
@@ -148,7 +156,7 @@
     transform: scale(1.25);
   }
 
-  h1 {
+  #titulo {
     text-align: center;
   }
 }

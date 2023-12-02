@@ -21,8 +21,8 @@ document.querySelectorAll(".miniaturaJuego").forEach(function (gameElement) {
 
     const canvas = document.createElement("canvas");
     canvas.id = `canvas${gameName.charAt(0).toUpperCase() + gameName.slice(1)}`;
-    canvas.width = 800; // Set the width of the canvas
-    canvas.height = 600; // Set the height of the canvas
+    canvas.width = 800;
+    canvas.height = 600;
     gameContainer.appendChild(canvas);
 
     document.body.appendChild(gameContainer);

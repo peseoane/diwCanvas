@@ -1,53 +1,53 @@
 :root[data-theme="light"] {
-    --text: #040316;
-    --background: #ffffff;
-    --primary: #0079ad;
-    --secondary: #71b4d0;
-    --accent: #004461;
-    --backgroundSvg: url("../img/backgroundLight.svg");
-    --backgroundSvgAlt: url("../img/backgroundAltLight.svg");
-    --github: url("../img/github-mark.svg");
-    --crt: url("../img/synthwave.gif");
-    --close: url("../img/circleLight.svg");
+  --text: #040316;
+  --background: #ffffff;
+  --primary: #0079ad;
+  --secondary: #71b4d0;
+  --accent: #004461;
+  --backgroundSvg: url("../img/backgroundLight.svg");
+  --backgroundSvgAlt: url("../img/backgroundAltLight.svg");
+  --github: url("../img/github-mark.svg");
+  --crt: url("../img/synthwave.gif");
+  --close: url("../img/circleLight.svg");
 }
 
 :root[data-theme="dark"] {
-    --text: #eae9fc;
-    --background: #000000;
-    --primary: #52cbff;
-    --secondary: #2f718e;
-    --accent: #9ee2ff;
-    --backgroundSvg: url("../img/backgroundDark.svg");
-    --backgroundSvgAlt: url("../img/backgroundAltDark.svg");
-    --github: url("../img/github-mark-white.svg");
-    --crt: url("../img/crt.gif");
-    --close: url("../img/close.svg");
+  --text: #eae9fc;
+  --background: #000000;
+  --primary: #52cbff;
+  --secondary: #2f718e;
+  --accent: #9ee2ff;
+  --backgroundSvg: url("../img/backgroundDark.svg");
+  --backgroundSvgAlt: url("../img/backgroundAltDark.svg");
+  --github: url("../img/github-mark-white.svg");
+  --crt: url("../img/crt.gif");
+  --close: url("../img/close.svg");
 }
 
 a {
-    color: var(--text);
+  color: var(--text);
 }
 
 a:hover {
-    color: var(--accent);
+  color: var(--accent);
 }
 
 a:active {
-    color: var(--accent);
+  color: var(--accent);
 }
 
 a:visited {
-    color: var(--text);
+  color: var(--text);
 }
 
 body {
-    background-color: var(--background);
-    background-image: var(--backgroundSvg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    color: var(--text);
-    font-family: "Roboto", sans-serif;
-    margin: 0;
-    padding: 0;
+  background-color: var(--background);
+  background-image: var(--backgroundSvg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: var(--text);
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
 }

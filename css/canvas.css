@@ -1,47 +1,43 @@
 @import "main.css";
 
-@import "main.css";
-
 .juegoActivo {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
 }
 
 .juegoActivo button {
-    position: absolute;
-    top: 3rem;
-    right: 3rem;
-    width: 5rem;
-    height: 5rem;
-    cursor: pointer;
-    background: var(--close) no-repeat center center / cover;
-    border: none;
-    transition: transform 0.3s ease-in-out;
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+  width: 5rem;
+  height: 5rem;
+  cursor: pointer;
+  background: var(--close) no-repeat center center / cover;
+  border: none;
+  transition: transform 0.3s ease-in-out;
 }
 
 .juegoActivo canvas {
-    width: calc(90vh * 4 / 3);
-    height: 90vh;
-    max-width: 100%;
+  width: calc(90vh * 4 / 3);
+  height: 90vh;
+  max-width: 100%;
 }
 
-
-
 .juegoActivo button:hover {
-    transform: scale(1.5);
+  transform: scale(1.5);
 }
 
 @media screen and (max-width: 800px) {
-    .juegoActivo canvas {
-        height: auto;
-        width: 100%;
-    }
+  .juegoActivo canvas {
+    height: auto;
+    width: 100%;
+  }
 }
