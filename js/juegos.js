@@ -57,7 +57,6 @@ document.querySelectorAll(".miniaturaJuego").forEach(function (gameElement) {
       canvas.width = 1024;
       canvas.height = 768;
     } else if (gameName === "bolas") {
-      /* add a speedSlider and a speedLabel and a speedValue */
       const controlsContainer = document.createElement("div");
       controlsContainer.id = "controlesCircunferencia";
 
@@ -80,6 +79,29 @@ document.querySelectorAll(".miniaturaJuego").forEach(function (gameElement) {
       speedValue.textContent = "50";
       controlsContainer.appendChild(speedValue);
 
+      gameContainer.appendChild(controlsContainer);
+    } else if (gameName === "colores") {
+      const controlsContainer = document.createElement("div");
+      controlsContainer.id = "controlesCuadrados";
+
+      const numeroCuadradosSlider = document.createElement("input");
+      numeroCuadradosSlider.id = "numeroCuadradosSlider";
+      numeroCuadradosSlider.type = "range";
+      numeroCuadradosSlider.min = "7";
+      numeroCuadradosSlider.max = "70";
+      numeroCuadradosSlider.value = "7";
+      numeroCuadradosSlider.className = "slider";
+      controlsContainer.appendChild(numeroCuadradosSlider);
+
+      const numCuadradosLabel = document.createElement("label");
+      numCuadradosLabel.id = "numCuadradosLabel";
+      numCuadradosLabel.textContent = "Numero de cuadrados";
+      controlsContainer.appendChild(numCuadradosLabel);
+
+      const numCuadradosValue = document.createElement("label");
+      numCuadradosValue.id = "speedValue";
+      numCuadradosValue.textContent = "50";
+      controlsContainer.appendChild(numCuadradosValue);
       gameContainer.appendChild(controlsContainer);
     }
   });

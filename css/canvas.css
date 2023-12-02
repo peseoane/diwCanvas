@@ -44,7 +44,8 @@
   background: url("../img/nubesFaro.svg") no-repeat center center / cover;
 }
 
-#controlesCircunferencia {
+#controlesCircunferencia,
+#controlesCuadrados {
   position: relative;
   width: 100%;
   height: auto;
@@ -54,7 +55,8 @@
   flex-direction: column;
 }
 
-#speedSlider {
+#speedSlider,
+#numeroCuadradosSlider {
   position: relative;
   -webkit-appearance: none;
   height: 1rem;
@@ -67,7 +69,8 @@
 }
 
 /** Ni idea de por qué... quita la caja negra del slider */
-input#speedSlider::before {
+input#speedSlider::before,
+input#numeroCuadradosSlider::before {
   display: none;
 }
 
