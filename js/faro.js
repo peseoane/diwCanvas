@@ -158,14 +158,12 @@ class Faro {
   }
 }
 
-window.onload = function () {
-  let canvas = new Canvas("canvasFaro");
-  let faro = new Faro();
-  faro.draw(canvas.context);
+let canvas = new Canvas("canvasFaro");
+let faro = new Faro();
+faro.draw(canvas.context);
 
-  setInterval(function () {
-    faro.toggleLight();
-    canvas.clearCanvas();
-    faro.draw(canvas.context);
-  }, 2000);
-};
+setInterval(function () {
+  faro.toggleLight();
+  canvas.clearCanvas();
+  faro.draw(canvas.context);
+}, 2000);

@@ -62,6 +62,7 @@ class CanvasHandler {
     this.ctx.fillStyle = paddle.color;
     this.ctx.fillRect(paddle.x, paddle.y, paddle.width, paddle.height);
   }
+
   drawScore(playerScore, aiScore) {
     this.ctx.fillStyle = "white";
     this.ctx.font = "24px Arial";
@@ -104,6 +105,7 @@ class Pong {
     this.aiScore = 0;
     this.gameRunning = false;
     this.canvasHandler = new CanvasHandler(canvas);
+    this.soundEnabled = true;
   }
 
   reset() {
@@ -186,6 +188,17 @@ class Pong {
     }
   }
 
+  drawSoundButton() {
+    this.canvasHandler.ctx.fillStyle = this.soundEnabled ? "green" : "red";
+    this.canvasHandler.ctx.fillRect(10, 10, 50, 50);
+  }
+
+  toggleSound(x, y) {
+    if (x >= 10 && x <= 60 && y >= 10 && y <= 60) {
+      this.soundEnabled = !this.soundEnabled;
+    }
+  }
+
   checkLegalBounds() {
     if (this.ball.y - this.ball.radius < 0) {
       this.ball.directionY = 1;
@@ -262,3 +275,8 @@ function playHit() {
   const beep = new Audio("../assets/squash.m4a");
   beep.play();
 }
+
+canvasPong.addEventListener("click", (event) => {
+  pong.toggleSound(event.offsetX, event.offsetY);
+  pong.drawSoundButton();
+});

@@ -126,7 +126,7 @@ class AnimatedCircles {
     this.outerCircle.draw(outerStrokeColor, outerFillColor, true, false);
     this.innerCircle.draw(innerStrokeColor, innerFillColor, true, false);
 
-    this.angle += this.speed * 0.02; // Ajusta la velocidad multiplicando por this.speed
+    this.angle += this.speed * 0.02;
     requestAnimationFrame(
       this.update.bind(
         this,
@@ -158,22 +158,25 @@ class AnimatedCircles {
 /**
  * Función que se ejecuta cuando la ventana ha cargado.
  */
-window.onload = function () {
-  const slider = document.getElementById("speedSlider");
-  const speedValue = document.getElementById("speedValue");
-  const initialSpeed = slider.value;
-  const canvas = new Canvas("canvasCircunferencia");
-  const animatedCircles = new AnimatedCircles(canvas, 200, 80, slider.value);
+const slider = document.getElementById("speedSlider");
+const speedValue = document.getElementById("speedValue");
+const initialSpeed = slider.value;
+const canvas = new Canvas("canvasBolas");
+const animatedCircles = new AnimatedCircles(canvas, 200, 80, slider.value);
 
-  slider.addEventListener("input", function () {
-    const newSpeed = slider.value;
-    speedValue.textContent = newSpeed;
-    animatedCircles.adjustSpeed(newSpeed);
-    console.log(newSpeed);
-  });
+slider.addEventListener("input", function () {
+  const newSpeed = slider.value;
+  speedValue.textContent = newSpeed;
+  animatedCircles.adjustSpeed(newSpeed);
+  console.log(newSpeed);
+});
 
-  animatedCircles.start("black", "red", "black", "blue");
+outline =
+  document.documentElement.getAttribute("data-theme") === "dark"
+    ? "white"
+    : "black";
 
-  speedValue.textContent = initialSpeed;
-  animatedCircles.adjustSpeed(initialSpeed);
-};
+animatedCircles.start(outline, outline, outline, "lightblue");
+
+speedValue.textContent = initialSpeed;
+animatedCircles.adjustSpeed(initialSpeed);

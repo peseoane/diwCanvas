@@ -56,6 +56,31 @@ document.querySelectorAll(".miniaturaJuego").forEach(function (gameElement) {
       // es una pena porque el juego está hecho con svgs y si no en 800x600 se ve muy borroso al escalar...
       canvas.width = 1024;
       canvas.height = 768;
+    } else if (gameName === "bolas") {
+      /* add a speedSlider and a speedLabel and a speedValue */
+      const controlsContainer = document.createElement("div");
+      controlsContainer.id = "controlesCircunferencia";
+
+      const speedSlider = document.createElement("input");
+      speedSlider.id = "speedSlider";
+      speedSlider.type = "range";
+      speedSlider.min = "1";
+      speedSlider.max = "20";
+      speedSlider.value = "1";
+      speedSlider.className = "slider";
+      controlsContainer.appendChild(speedSlider);
+
+      const speedLabel = document.createElement("label");
+      speedLabel.id = "speedLabel";
+      speedLabel.textContent = "Speed";
+      controlsContainer.appendChild(speedLabel);
+
+      const speedValue = document.createElement("label");
+      speedValue.id = "speedValue";
+      speedValue.textContent = "50";
+      controlsContainer.appendChild(speedValue);
+
+      gameContainer.appendChild(controlsContainer);
     }
   });
 });
