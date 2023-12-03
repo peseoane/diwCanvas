@@ -1,0 +1,50 @@
+#boxModel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+}
+
+#boxModel:hover {
+    width: 100%;
+    height: 100%;
+}
+
+#boxModel div {
+    width: 50%;
+    height: 50%;
+    padding: 1rem;
+    transition: transform 0.3s ease-in-out;
+    transform-origin: center center;
+    overflow: hidden;
+}
+
+#boxModel p {
+    padding: 0.2rem;
+    margin: 0;
+    transform-origin: center center;
+}
+
+#amarillo {
+    position: absolute;
+    background-color: yellow;
+    border: solid 0.3rem black;
+    top: 1rem;
+    left: 1rem;
+}
+
+#rojo {
+    position: absolute;
+    background-color: red;
+    border: solid 0.3rem black;
+    top: 3rem;
+    left: 3rem;
+}
+
+#azul {
+    position: absolute;
+    background-color: blue;
+    border: solid 0.3rem black;
+    top: 5rem;
+    left: 5rem;
+}
