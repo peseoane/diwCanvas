@@ -1,0 +1,58 @@
+#flexboxEjercicioCss {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.flexboxEjercicio aside {
+  background-color: var(--primary);
+  margin: 10px;
+  width: 50%;
+  padding: 1em;
+}
+
+.flexboxEjercicio p:first-child {
+  font-size: larger;
+  font-weight: bold;
+}
+
+.flexboxEjercicio div {
+  width: 28%;
+  padding: 1rem;
+  background-color: var(--primary);
+  margin: 1rem;
+}
+
+#flexboxEjercicio {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#sidebar {
+  order: 0;
+  flex-basis: 60%;
+}
+
+#flexboxEjercicio1,
+#flexboxEjercicio2 {
+  order: 1;
+  background: var(--primary);
+  flex-basis: 33%;
+}
+
+#flexboxEjercicio3 {
+  order: 2;
+  flex-basis: 100%;
+  background: var(--accent);
+}
+
+#flexboxEjercicio4,
+#flexboxEjercicio5 {
+  order: 3;
+  flex-basis: 33%;
+  background: var(--secondary);
+}

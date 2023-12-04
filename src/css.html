@@ -65,55 +65,129 @@
 
         <div class="containerEjercicioCss" id="containerEjercicioTarjetas">
           <div class="ejercicioCss" id="ejercicioTarjetas">
-            <p>Tarjetas</p>
-                <link rel="stylesheet" href="../css/tarjetas.css" />
+            <h5>Tarjetas</h5>
+            <link rel="stylesheet" href="../css/tarjetas.css" />
+            <div class="containerTarjetas">
               <article class="tarjeta1">
-                  <h5>Tarjeta 1</h5>
-                  <p>Contenido de la tarjeta 1.</p>
-                  <div>
-                      <p>Categoría</p>
-                      <a href="#">Enlace</a>
-                  </div>
+                <h5>Tarjeta 1</h5>
+                <p>Contenido de la tarjeta 1.</p>
+                <div>
+                  <p>Categoría</p>
+                  <a href="#">Enlace</a>
+                </div>
               </article>
               <article class="tarjeta2">
-                  <h5>Tarjeta 2</h5>
-                  <p>Contenido de la tarjeta 2.</p>
-                  <div>
-                      <p>Categoría</p>
-                      <a href="#">Enlace</a>
-                  </div>
+                <h5>Tarjeta 2</h5>
+                <p>Contenido de la tarjeta 2.</p>
+                <div>
+                  <p>Categoría</p>
+                  <a href="#">Enlace</a>
+                </div>
               </article>
-
+            </div>
           </div>
         </div>
 
-        <div class="containerEjercicioCss" id="containerEjercicioFlexboxGrid">
-          <div class="ejercicioCss" id="ejercicioFlexboxGrid">
-            <p>Flexbox Grid</p>
+        <div class="containerEjercicioCss" id="containerEjercicioGrid">
+          <div class="ejercicioCss" id="ejercicioGrid">
+            <h5 class="titulo">Grid</h5>
+            <link rel="stylesheet" href="../css/grid.css" />
+            <div class="gridEjercicio" id="gridEjercicioCss">
+              <div id="gridEjercicio1">
+                <p>1</p>
+              </div>
+              <div id="gridEjercicio2">
+                <p>2</p>
+              </div>
+              <div id="gridEjercicio3">
+                <p>3</p>
+              </div>
+              <div id="gridEjercicio4">
+                <p>4</p>
+              </div>
+              <div id="gridEjercicio5">
+                <p>5</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="containerEjercicioCss" id="containerEjercicioFlexbox">
+          <div class="ejercicioCss" id="ejercicioFlexbox">
+            <h5 class="titulo">Flexbox</h5>
+
+            <link rel="stylesheet" href="../css/flexbox.css" />
+
+            <div class="flexboxEjercicio" id="flexboxEjercicioCss">
+              <aside id="sidebar">
+                <p>Sidebar</p>
+                <p>Contenido principal</p>
+              </aside>
+              <div class="elementoFlex" id="flexboxEjercicio1">
+                <p>1</p>
+              </div>
+              <div class="elementoFlex" id="flexboxEjercicio2">
+                <p>2</p>
+              </div>
+              <div class="elementoFlex" id="flexboxEjercicio3">
+                <p>3</p>
+              </div>
+              <div class="elementoFlex" id="flexboxEjercicio4">
+                <p>4</p>
+              </div>
+              <div class="elementoFlex" id="flexboxEjercicio5">
+                <p>5</p>
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="containerEjercicioCss" id="containerEjercicioBarraSticky">
           <div class="ejercicioCss" id="ejercicioBarraSticky">
-            <p>Barra Sticky</p>
+            <h5>Barra Sticky</h5>
+            <p>La barra sticky está presente en esta misma web (ver footer)</p>
           </div>
         </div>
 
         <div class="containerEjercicioCss" id="containerEjercicioTransiciones">
           <div class="ejercicioCss" id="ejercicioTransiciones">
             <p>Transiciones</p>
+            <p>
+              Al pasar el ratón por encima de cualquier elemento del grid o flex
+              de la página está animado el hoover y la carga/descarga de los
+              canvas
+            </p>
           </div>
         </div>
 
         <div class="containerEjercicioCss" id="containerEjercicioTextoAvanzado">
           <div class="ejercicioCss" id="ejercicioFormularioTextoAvanzado">
-            <p>Formulario Fondo y Texto</p>
+            <h5>Texto Avanzado</h5>
+            <p class="textoAvanzado">Texto animado con CSS.</p>
+            <link rel="stylesheet" href="../css/textoAvanzado.css" />
           </div>
         </div>
 
         <div class="containerEjercicioCss" id="containerEjercicioFormulario">
           <div class="ejercicioCss" id="ejercicioFormulario">
-            <p>Formulario</p>
+            <link rel="stylesheet" href="../css/formulario.css" />
+            <form id="form">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" />
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" />
+              <input type="submit" value="Submit" />
+            </form>
+            <script>
+              const form = document.getElementById("form");
+              form.addEventListener("submit", (e) => {
+                e.preventDefault();
+                const formData = new FormData(form);
+                const data = Object.fromEntries(formData);
+                console.log(data);
+                alert(JSON.stringify(data));
+              });
+            </script>
           </div>
         </div>
 

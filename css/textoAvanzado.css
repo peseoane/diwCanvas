@@ -1,0 +1,41 @@
+@import "main.css";
+
+.textoAvanzado {
+  margin: 0;
+  text-align: center;
+  justify-content: center;
+  padding: 10%;
+}
+
+.textoAvanzado p {
+  font-size: 2em;
+  color: var(--primary);
+  text-shadow: 2px 2px 4px var(--text);
+  white-space: nowrap;
+  -webkit-text-stroke: 0.4px var(--secondary);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  transition:
+    font-size 1s,
+    color 1s;
+  display: inline-block;
+}
+
+.textoAvanzado:hover {
+  font-size: 4em;
+  color: var(--text);
+  -webkit-text-stroke: 0.4px var(--secondary);
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

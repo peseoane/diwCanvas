@@ -1,82 +1,78 @@
-:root {
-    --vh: 1vh;
-    --vw: 1vw;
+#ejercicioTarjetas {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
 }
 
-.tarjetas {
-    margin: 0;
-    background-color: #f8f4f4;
-}
-
-.tarjetas section {
-    margin-top: 10%;
-    margin-bottom: 10%;
-    display: flex;
-    justify-content: center;
-    gap: 10%;
+.containerTarjetas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+  overflow: hidden;
+  padding: 2rem;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .tarjeta1,
 .tarjeta2 {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-            135deg,
-            rgba(255, 148, 130, 1) 18%,
-            rgba(125, 119, 255, 1) 89%
-    );
-    color: white;
-    border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
-    transform-origin: center center;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: calc(50% - 2rem);
+  height: 100%;
+  background: var(--primary);
+  color: white;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+  transform-origin: center center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
-.tarjeta1:hover,
-.tarjeta2:hover {
-    transform: scale(calc(0.9 * var(--vh)), calc(0.9 * var(--vw)));
+.tarjeta1 h5,
+.tarjeta2 h5 {
+  margin-bottom: auto;
 }
 
-.tarjetas div {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-    background-color: #2824247d;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+.tarjeta1 div,
+.tarjeta2 div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  background-color: var(--secondary);
 }
 
 .tarjeta1 p:not(div p),
 .tarjeta2 p:not(div p) {
-    margin-bottom: 320px;
+  margin-bottom: 1rem;
 }
 
-.tarjetas div > p {
-    color: black;
-    font-weight: bold;
+.tarjeta1 div > p,
+.tarjeta2 div > p {
+  color: black;
+  font-weight: bold;
 }
 
-.tarjetas a {
-    color: white;
-    align-content: center;
-    text-decoration: none;
+.tarjeta1 a,
+.tarjeta2 a {
+  color: white;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 800px) {
-    .tarjetas {
-        grid-template-columns: 1fr;
-        grid-gap: 3rem;
-    }
+  .ejercicioCss {
+    flex-direction: column;
+  }
 
-    .tarjeta1,
-    .tarjeta2 {
-        width: 50vw;
-        height: 50vw;
-    }
-
-    .tarjeta1:hover,
-    .tarjeta2:hover {
-        transform: scale(1.25);
-    }
+  .tarjeta1,
+  .tarjeta2 {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
 }

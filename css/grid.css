@@ -1,0 +1,68 @@
+#containerEjercicioGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+#containerEjercicioGrid:hover {
+  transition: transform 1s ease-in-out;
+  transform: scale(1.1);
+  width: 100%;
+  height: 100%;
+}
+
+#contenido {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#contenido div {
+  width: 28%;
+  padding: 1rem;
+  background-color: var(--primary);
+  margin: 1rem;
+}
+
+.gridEjercicio {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+}
+
+.gridEjercicio div {
+  padding: 1rem;
+  margin: 1rem;
+  text-align: center;
+  color: var(--text);
+  width: calc(100% - 60px);
+}
+
+#gridEjercicio1 {
+  grid-row: 1;
+  grid-column: 1;
+  background-color: var(--primary);
+}
+
+#gridEjercicio2 {
+  grid-row: 1;
+  grid-column: 2;
+  background-color: var(--secondary);
+}
+
+#gridEjercicio3 {
+  grid-row: 2;
+  grid-column: 2;
+  background-color: var(--accent);
+}
+
+#gridEjercicio4 {
+  grid-row: 3;
+  grid-column: span 2;
+  background-color: var(--background);
+}
+
+#gridEjercicio5 {
+  grid-row: 4;
+  background-color: var(--primary);
+}
