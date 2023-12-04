@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Demostración con Canva</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/media.css" />
+    <meta name="page-id" content="media" />
+  </head>
+  <body>
+  <div id="navegacion"></div>
+    <div id="seccionMedia">
+      <h1>Vídeo WEBM</h1>
+      <p>Los controles controlan el vídeo mediante JavaScript</p>
+      <video id="video">
+        <source src="../video/lolita.webm" type="video/webm" />
+        <p>Tu navegador no soporta el reproductor de vídeos</p>
+      </video>
+
+      <div class="controles">
+        <div>
+          <label for="playButton">Play</label>
+          <button class="svgReproductor"  id="playButton"> </button>
+
+          <label for="pauseButton">Pause</label>
+          <button class="svgReproductor"  id="pauseButton"> </button>
+
+          <label for="stopButton">Stop</label>
+          <button class="svgReproductor"  id="stopButton"> </button>
+
+          <label for="muteButton">Mute</label>
+          <button class="svgReproductor"  id="muteButton"> </button>
+
+          <label for="volumeSlider">Volume</label>
+          <input
+            type="range"
+            id="volumeSlider"
+            min="0"
+            max="1"
+            step="0.1"
+            value="1"
+          />
+        </div>
+
+        <label for="timeInput">Time</label>
+        <input
+                type="text"
+                id="timeInput"
+                min="0"
+                step="1"
+                value="0"
+        />
+      </div>
+    </div>
+
+    <footer>
+      <div id="piePagina"></div>
+    </footer>
+    <script src="../js/navbar.js" defer></script>
+    <script src="../js/darkmode.js" defer></script>
+    <script src="../js/media.js" defer></script>
+  </body>
+</html>

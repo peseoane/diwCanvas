@@ -24,6 +24,13 @@
   --close: url("../img/close.svg");
 }
 
+:root {
+  --volume: url("../img/volumeLight.svg");
+  --pause: url("../img/pauseLight.svg");
+  --play: url("../img/playLight.svg");
+  --stop: url("../img/stopLight.svg");
+}
+
 a {
   color: var(--text);
 }
