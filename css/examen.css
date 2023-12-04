@@ -1,0 +1,39 @@
+@import "main.css";
+
+#principalExamen {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  padding-left: 0rem;
+  padding-right: 0rem;
+}
+
+.ejercicoExamen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  border: 1px solid var(--text);
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+#ejercicioExamen1 {
+  color: var(--background);
+  background-color: var(--primary);
+}
+
+#ejercicioExamen2 {
+  background-color: var(--secondary);
+}
+
+#ejercicioExamen3 {
+  background-color: var(--background);
+}
