@@ -112,3 +112,20 @@
     display: none;
   }
 }
+
+#avisoTema {
+  position: fixed;
+  background-color: var(--secondary);
+  color: var(--text);
+  padding: 0.5rem;
+  margin: 0.5rem;
+  right: 1vw;
+  top: 3rem;
+  border-radius: 0.25rem;
+  white-space: nowrap;
+  animation: pulse 1s ease-in-out infinite;
+}
+
+#avisoTema.hide {
+  display: none;
+}

@@ -41,3 +41,7 @@ fetch("../templates/footer.html")
     const navegacion = document.getElementById("piePagina");
     navegacion.innerHTML = content;
   });
+
+setTimeout(function () {
+  document.getElementById("avisoTema").classList.add("hide");
+}, 7000);
