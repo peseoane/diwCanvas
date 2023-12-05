@@ -4,6 +4,14 @@
 
 > Seoane Prado, Pedro 2º DAW
 
+# IMPORTANTE
+La página necesita un LIVE SERVER para funcionar, dado que los navegadores modernos no permiten
+importar JavaScript fuera de protocolo HTTP y aquí manejamos muchos Js que se importan en cascada.
+
+Como alternativa rápida, la página está desplegada en GitHub Pages:
+
+
+
 ## Introducción
 
 La web usa tecnologías _base_, no hemos usado ningún framework ni utilidad especial, se ha trabajado directamente con JavaScript (ES2015 un compromiso medio entre legacy y soporte de funciones modernas), HTML5 y CSS3.
