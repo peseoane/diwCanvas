@@ -129,3 +129,10 @@
 #avisoTema.hide {
   display: none;
 }
+
+.logotipoPrincipal {
+  background: url("../favicon.svg") no-repeat center;
+  background-size: contain;
+  width: 2rem;
+  height: 2rem;
+}
