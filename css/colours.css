@@ -9,6 +9,7 @@
   --github: url("../img/github-mark.svg");
   --crt: url("../img/synthwave.gif");
   --close: url("../img/circleLight.svg");
+  --docsPaperBackground: #f1f2f3;
 }
 
 :root[data-theme="dark"] {
@@ -22,6 +23,7 @@
   --github: url("../img/github-mark-white.svg");
   --crt: url("../img/crt.gif");
   --close: url("../img/close.svg");
+  --docsPaperBackground: #222b34;
 }
 
 :root {
