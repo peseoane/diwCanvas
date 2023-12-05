@@ -5,6 +5,7 @@
 > Seoane Prado, Pedro 2º DAW
 
 # IMPORTANTE
+
 La página necesita un LIVE SERVER para funcionar, dado que los navegadores modernos no permiten
 importar JavaScript fuera de protocolo HTTP y aquí manejamos muchos Js que se importan en cascada.
 
@@ -18,8 +19,6 @@ Como alternativa rápida, la página está desplegada en GitHub Pages:
 [Ver la página web](https://peseoane.github.io/diwCanvas/src/index.html)
 
 [Despliegues por fecha para validar entrega](https://github.com/peseoane/diwCanvas/deployments/github-pages)
-
-
 
 ## Introducción
 
