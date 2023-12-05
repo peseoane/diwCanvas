@@ -8,7 +8,7 @@
     <meta name="page-id" content="media" />
   </head>
   <body>
-  <div id="navegacion"></div>
+    <div id="navegacion"></div>
     <div id="seccionMedia">
       <h1>Vídeo WEBM</h1>
       <p>Los controles controlan el vídeo mediante JavaScript</p>
@@ -20,16 +20,16 @@
       <div class="controles">
         <div>
           <label for="playButton">Play</label>
-          <button class="svgReproductor"  id="playButton"> </button>
+          <button class="svgReproductor" id="playButton"></button>
 
           <label for="pauseButton">Pause</label>
-          <button class="svgReproductor"  id="pauseButton"> </button>
+          <button class="svgReproductor" id="pauseButton"></button>
 
           <label for="stopButton">Stop</label>
-          <button class="svgReproductor"  id="stopButton"> </button>
+          <button class="svgReproductor" id="stopButton"></button>
 
           <label for="muteButton">Mute</label>
-          <button class="svgReproductor"  id="muteButton"> </button>
+          <button class="svgReproductor" id="muteButton"></button>
 
           <label for="volumeSlider">Volume</label>
           <input
@@ -43,13 +43,45 @@
         </div>
 
         <label for="timeInput">Time</label>
-        <input
-                type="text"
-                id="timeInput"
-                min="0"
-                step="1"
-                value="0"
-        />
+        <input type="text" id="timeInput" min="0" step="1" value="0" />
+      </div>
+    </div>
+
+    <div class="seccionMedia album">
+      <div class="controlesFoto">
+        <button id="prevButton" class="slideButton">Prev</button>
+        <button id="nextButton" class="slideButton">Next</button>
+      </div>
+      <div class="slideshow">
+        <div class="fotos fade">
+          <div class="numeros">0 / 4</div>
+          <img src="../img/lolita0.jpg" alt="Lolita la pug!" />
+          <div class="texto">Imagen 0</div>
+        </div>
+
+        <div class="fotos fade">
+          <div class="numeros">1 / 4</div>
+          <img src="../img/lolita1.jpg" alt="Lolita la pug!" />
+          <div class="texto">Imagen 1</div>
+        </div>
+
+        <div class="fotos fade">
+          <div class="numeros">2 / 4</div>
+          <img src="../img/lolita2.jpg" alt="Lolita la pug!" />
+          <div class="texto">Imagen 2</div>
+        </div>
+
+        <div class="fotos fade">
+          <div class="numeros">3 / 4</div>
+          <img src="../img/lolita3.jpg" alt="Lolita la pug!" />
+          <div class="texto">Imagen 3</div>
+        </div>
+
+        <div class="fotos fade">
+          <div class="numeros">4 / 4</div>
+          <img src="../img/lolita4.jpg" alt="Lolita la pug!" />
+          <div class="texto">Imagen 4</div>
+        </div>
       </div>
     </div>
 
@@ -59,5 +91,6 @@
     <script src="../js/navbar.js" defer></script>
     <script src="../js/darkmode.js" defer></script>
     <script src="../js/media.js" defer></script>
+    <script src="../js/slideshow.js" defer></script>
   </body>
 </html>

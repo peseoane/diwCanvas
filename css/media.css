@@ -10,12 +10,10 @@
 }
 
 #seccionMedia p {
-    padding: 1rem;
+  padding: 1rem;
 }
 
 #video {
-  width: 50%;
-  height: 50%;
   border-radius: 1.5rem;
 }
 
@@ -24,7 +22,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 50%;
 }
 
 .controles div {
@@ -129,6 +126,66 @@ input[type="range"]::-moz-range-thumb:hover {
   filter: invert(1);
 }
 
+.album,
+.slideshow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.controlesFoto {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.slideButton {
+  width: auto;
+  padding: 1rem;
+  margin: 1rem;
+  color: var(--text);
+  font-weight: bold;
+  font-size: 1.125rem;
+  transition: 0.6s ease;
+  user-select: none;
+  background-color: var(--secondary);
+  border-radius: 1rem;
+  border: none;
+}
+
+.slideButton:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+  background-color: var(--primary);
+  transition: 0.6s ease;
+}
+
+.album img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  border-radius: 1.5rem;
+  object-fit: cover;
+  transition: 0.6s ease;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.5;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 @media screen and (max-width: 800px) {
   #seccionMedia {
     width: 100%;
@@ -137,5 +194,9 @@ input[type="range"]::-moz-range-thumb:hover {
   #video {
     width: 80%;
     height: 80%;
+  }
+
+  .album img {
+    width: 75vw;
   }
 }
